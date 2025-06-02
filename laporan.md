@@ -12,6 +12,16 @@ Pentingnya pengembangan sistem rekomendasi film yang efektif tidak hanya terleta
 - Ricci, F., Rokach, L., & Shapira, B. (2015). *Recommender Systems Handbook*. Springer.
 - Gomez-Uribe, C. A., & Hunt, N. (2015). The Netflix Recommender System. *ACM Transactions on Management Information Systems*.
 - McKinsey & Company. (2016). How retailers can keep up with consumers.
+Berikut adalah perbaikan sesuai permintaan kamu: bagian **"📂 Sumber Dataset"** sudah dipindahkan ke bawah bagian **Referensi**, jadi susunannya sekarang menjadi seperti ini:
+
+
+### 📂 Sumber Dataset
+
+Dataset yang digunakan dalam proyek ini bersumber dari:
+
+🔗 **[Kaggle - Content-Based Filtering Dataset by Pushpak Gote](https://www.kaggle.com/datasets/pushpakgote/content-based-filtering-main)**
+
+Dataset ini merupakan modifikasi dari MovieLens yang telah disesuaikan untuk keperluan eksperimen sistem rekomendasi berbasis content dan collaborative filtering.
 
 ## Business Understanding
 
