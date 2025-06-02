@@ -18,7 +18,8 @@ Sistem rekomendasi telah menjadi solusi krusial untuk mengatasi masalah ini. Net
 ### Referensi dan Riset Terkait
 
 Berdasarkan penelitian Gomez-Uribe & Hunt (2016) dalam "The Netflix Recommender System", sistem rekomendasi yang efektif dapat meningkatkan user satisfaction hingga 20-30%. Studi lain oleh Ricci et al. (2015) dalam "Recommender Systems Handbook" menunjukkan bahwa content-based filtering sangat efektif untuk mengatasi cold start problem pada pengguna baru.
-
+### Dataset
+https://www.kaggle.com/datasets/pushpakgote/content-based-filtering-main
 ## Business Understanding
 
 ### Problem Statements
