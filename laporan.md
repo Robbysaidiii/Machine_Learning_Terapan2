@@ -13,7 +13,7 @@ Pentingnya pengembangan sistem rekomendasi film yang efektif tidak hanya terleta
 - Gomez-Uribe, C. A., & Hunt, N. (2015). The Netflix Recommender System. *ACM Transactions on Management Information Systems*.
 - McKinsey & Company. (2016). How retailers can keep up with consumers.
 
-### 📂 Sumber Dataset
+### Sumber Dataset
 
 Dataset yang digunakan dalam proyek ini bersumber dari:
 
