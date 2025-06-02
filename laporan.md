@@ -81,7 +81,8 @@ Dataset yang digunakan dalam proyek ini bersumber dari MovieLens, yang merupakan
 - **Sumber data**: Dataset MovieLens (modified for content-based filtering)
 - **Format**: CSV dan Pickle files
 - **Skala rating**: 1-5 (integer values)
-
+- **Missing value**: 0 tidak ada missing value
+- **duplikat**: 0 tidak ada data yang terduplikat
 ### Struktur Data
 
 #### 1. Movie List (content_movie_list.csv)
