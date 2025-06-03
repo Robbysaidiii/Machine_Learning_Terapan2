@@ -308,84 +308,31 @@ def get_similar_movies(self, movie_title, n_recommendations=5):
 - Menggunakan pre-computed similarity matrix
 - Mengembalikan film dengan similarity score tertinggi
 
-### Hasil Rekomendasi Detail
+### Top-N Recommendation Results
 
-#### User 2 - Profile Analisis:
-**Preferensi Genre (glist)**: [3.9, 5.0, 0.0, 0.0, 4.0, 4.2, 4.0, 4.0, 0.0, 3.0, 4.0, 0.0, 4.25, 3.875]
+#### Contoh Rekomendasi untuk User 2:
+| Rank | Film | Genres | Score |
+|------|------|--------|-------|
+| 1 | Sherlock Holmes: A Game of Shadows (2011) | Action\|Adventure\|Comedy\|Crime\|Mystery\|Thriller | 24.98 |
+| 2 | Jurassic World (2015) | Action\|Adventure\|Drama\|Sci-Fi\|Thriller | 21.02 |
+| 3 | Children of Men (2006) | Action\|Adventure\|Drama\|Sci-Fi\|Thriller | 21.02 |
+| 4 | Jumper (2008) | Action\|Adventure\|Drama\|Sci-Fi\|Thriller | 21.02 |
+| 5 | The Hunger Games (2012) | Action\|Adventure\|Drama\|Sci-Fi\|Thriller | 21.02 |
 
-**Interpretasi Profil**:
-- **Comedy** (5.0): Sangat tinggi - genre favorit utama
-- **Sci-Fi** (4.25): Tinggi - preferensi kuat untuk fiksi ilmiah
-- **Adventure** (4.2): Tinggi - menyukai film petualangan
-- **Action**, **Crime**, **Drama**, **Thriller** (4.0): Konsisten menyukai genre aksi dan drama
-- **Western** (3.9): Sedang - cukup menyukai film koboi
-- **Mystery** (3.0): Rendah - kurang tertarik misteri
+#### Contoh Rekomendasi untuk User 4:
+| Rank | Film | Genres | Score |
+|------|------|--------|-------|
+| 1 | Shrek (2001) | Adventure\|Animation\|Children\|Comedy\|Fantasy\|Romance | 18.50 |
+| 2 | Click (2006) | Adventure\|Comedy\|Drama\|Fantasy\|Romance | 17.75 |
+| 3 | Inside Out (2015) | Adventure\|Animation\|Children\|Comedy\|Drama\|Fantasy | 17.75 |
+| 4 | Moana (2016) | Adventure\|Animation\|Children\|Comedy\|Fantasy | 14.50 |
+| 5 | The Lego Movie (2014) | Action\|Adventure\|Animation\|Children\|Comedy\|Fantasy | 14.50 |
 
-**Top 5 Rekomendasi untuk User 2**:
-1. **Sherlock Holmes: A Game of Shadows (2011)** | Genres: Action|Adventure|Comedy|Crime|Mystery|Thriller | Score: 24.98
-2. **Jurassic World (2015)** | Genres: Action|Adventure|Drama|Sci-Fi|Thriller | Score: 21.02
-3. **Children of Men (2006)** | Genres: Action|Adventure|Drama|Sci-Fi|Thriller | Score: 21.02
-4. **Jumper (2008)** | Genres: Action|Adventure|Drama|Sci-Fi|Thriller | Score: 21.02
-5. **The Hunger Games (2012)** | Genres: Action|Adventure|Drama|Sci-Fi|Thriller | Score: 21.02
+### Analisis Hasil
 
-**Analisis Rekomendasi User 2**:
-- Film Sherlock Holmes mendapat skor tertinggi (24.98) karena menggabungkan banyak genre favorit: Comedy (5.0), Action (4.0), Adventure (4.2), Crime (4.0), dan Thriller (4.0)
-- Film-film lainnya konsisten mendapat skor 21.02 karena kombinasi Action+Adventure+Sci-Fi+Thriller yang sesuai dengan preferensi tinggi user
+1. **User 2**: Profil menunjukkan preferensi tinggi untuk genre action, adventure, sci-fi, dan thriller. Sistem merekomendasikan film dengan kombinasi genre tersebut.
 
----
-
-#### User 3 - Profile Analisis:
-**Preferensi Genre (glist)**: [0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5]
-
-**Interpretasi Profil**:
-- **Cold Start User**: Hanya memiliki 1 rating (0.5) - pengguna dengan data sangat terbatas
-- Preferensi sangat rendah untuk semua genre (0.5)
-- Menunjukkan kasus challenging untuk sistem rekomendasi
-
-**Top 5 Rekomendasi untuk User 3**:
-1. **Jurassic World (2015)** | Genres: Action|Adventure|Drama|Sci-Fi|Thriller | Score: 2.00
-2. **Source Code (2011)** | Genres: Action|Drama|Mystery|Sci-Fi|Thriller | Score: 2.00
-3. **The Hunger Games (2012)** | Genres: Action|Adventure|Drama|Sci-Fi|Thriller | Score: 2.00
-4. **Star Trek: Nemesis (2002)** | Genres: Action|Drama|Sci-Fi|Thriller | Score: 2.00
-5. **Rise of the Planet of the Apes (2011)** | Genres: Action|Drama|Sci-Fi|Thriller | Score: 2.00
-
-**Analisis Rekomendasi User 3**:
-- Sistem memberikan skor rendah (2.0) karena preferensi user yang minimal
-- Rekomendasi fokus pada film dengan genre Action+Sci-Fi+Thriller yang memiliki appeal luas
-- Menunjukkan strategi "popular items" untuk cold start users
-
----
-
-#### User 4 - Profile Analisis:
-**Preferensi Genre (glist)**: [0.0, 4.0, 0.0, 4.0, 2.5, 4.0, 0.0, 3.25, 4.0, 0.0, 0.0, 4.0, 0.0, 0.0]
-
-**Interpretasi Profil**:
-- **Animation** (4.0): Tinggi - menyukai film animasi
-- **Children** (4.0): Tinggi - preferensi untuk film family-friendly
-- **Fantasy** (4.0): Tinggi - menyukai genre fantasi
-- **Romance** (4.0): Tinggi - menyukai cerita romantis
-- **Drama** (3.25): Sedang-tinggi - cukup menyukai drama
-- **Adventure** (2.5): Sedang - preferensi moderat untuk petualangan
-
-**Top 5 Rekomendasi untuk User 4**:
-1. **Shrek (2001)** | Genres: Adventure|Animation|Children|Comedy|Fantasy|Romance | Score: 18.50
-2. **Click (2006)** | Genres: Adventure|Comedy|Drama|Fantasy|Romance | Score: 17.75
-3. **Inside Out (2015)** | Genres: Adventure|Animation|Children|Comedy|Drama|Fantasy | Score: 17.75
-4. **Moana (2016)** | Genres: Adventure|Animation|Children|Comedy|Fantasy | Score: 14.50
-5. **The Lego Movie (2014)** | Genres: Action|Adventure|Animation|Children|Comedy|Fantasy | Score: 14.50
-
-**Analisis Rekomendasi User 4**:
-- Shrek mendapat skor tertinggi (18.50) karena perfect match dengan 6 genre favorit: Adventure, Animation, Children, Fantasy, Romance
-- Rekomendasi sangat sesuai dengan profil family-oriented dan animation lover
-- Semua film yang direkomendasikan cocok untuk audience yang menyukai konten family-friendly
-
-### Perbandingan Pola Rekomendasi
-
-1. **User 2 (Action/Sci-Fi Enthusiast)**: Mendapat rekomendasi film dewasa dengan genre aksi dan sci-fi
-2. **User 3 (Cold Start)**: Mendapat rekomendasi film populer dengan appeal luas
-3. **User 4 (Family/Animation Lover)**: Mendapat rekomendasi film animasi dan family-friendly
-
-Hasil ini menunjukkan bahwa sistem berhasil memberikan rekomendasi yang **personal** dan **kontekstual** berdasarkan profil masing-masing pengguna.
+2. **User 4**: Profil menunjukkan preferensi untuk genre animasi, komedi, dan family-friendly. Rekomendasi yang dihasilkan sesuai dengan preferensi ini.
 
 ### Kelebihan dan Kekurangan Pendekatan
 
@@ -488,22 +435,15 @@ Sistem rekomendasi yang dikembangkan menunjukkan:
 Proyek sistem rekomendasi film menggunakan Content-Based Filtering telah berhasil dikembangkan dengan hasil yang memuaskan. Sistem mampu memberikan rekomendasi yang personal dengan tingkat akurasi sedang-tinggi (0.543) sambil mempertahankan keberagaman genre yang baik (0.693).
 
 ### Pencapaian Utama:
-1. **Implementasi sistem rekomendasi end-to-end** yang dapat menangani berbagai profil pengguna
-2. **Pengembangan metrik evaluasi yang komprehensif** untuk mengukur personalisasi dan diversitas
-3. **Analisis mendalam terhadap performa sistem** dengan contoh konkret dari 3 tipe pengguna berbeda
-4. **Dokumentasi lengkap proses pengembangan** dari data understanding hingga evaluasi
-
-### Insight Penting:
-1. **Sistem berhasil menangani cold start problem** - User 3 dengan data minimal tetap mendapat rekomendasi yang reasonable
-2. **Personalisasi efektif** - User 2 dan User 4 mendapat rekomendasi yang sangat sesuai dengan preferensi masing-masing
-3. **Keberagaman terjaga** - Genre coverage 69.3% menunjukkan sistem tidak terjebak dalam filter bubble
-4. **Transparansi tinggi** - Setiap rekomendasi dapat dijelaskan berdasarkan kesesuaian genre
+1. Implementasi sistem rekomendasi end-to-end
+2. Pengembangan metrik evaluasi yang komprehensif
+3. Analisis mendalam terhadap performa sistem
+4. Dokumentasi lengkap proses pengembangan
 
 ### Rekomendasi Pengembangan Lanjutan:
-1. **Hybrid Approach**: Kombinasi content-based dan collaborative filtering untuk meningkatkan akurasi dan serendipity
-2. **Feature Enhancement**: Menambahkan fitur rating, sutradara, aktor, tahun rilis untuk personalisasi yang lebih mendalam
-3. **Real-time Learning**: Implementasi online learning untuk adaptasi preferensi pengguna secara dinamis
-4. **A/B Testing**: Evaluasi performa sistem dalam production environment dengan user feedback nyata
-5. **Scalability Optimization**: Implementasi caching dan indexing untuk performa yang lebih baik pada dataset besar
+1. **Hybrid Approach**: Kombinasi content-based dan collaborative filtering
+2. **Feature Enhancement**: Menambahkan fitur rating, sutradara, aktor
+3. **Real-time Learning**: Implementasi online learning untuk adaptasi preferensi
+4. **A/B Testing**: Evaluasi performa sistem dalam production environment
 
-Sistem ini dapat menjadi foundation yang solid untuk pengembangan platform streaming yang lebih sophisticated dan user-centric, dengan kemampuan adaptasi terhadap berbagai skenario pengguna dan preferensi yang beragam.
+Sistem ini dapat menjadi foundation yang solid untuk pengembangan platform streaming yang lebih sophisticated dan user-centric.
