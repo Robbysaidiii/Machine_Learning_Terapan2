@@ -140,7 +140,7 @@ Dataset terdiri dari beberapa file:
 #### 1. Distribusi Genre Film
 
 Analisis menunjukkan 10 genre paling populer:
-
+![Alt text](path/to/image.png "Judul gambar")
 1. **Comedy** (296 film) - Genre paling dominan
 2. **Drama** (281 film) - Hampir setara dengan comedy
 3. **Action** (234 film) - Genre aksi cukup populer
