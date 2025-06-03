@@ -102,7 +102,7 @@ Dataset yang digunakan dalam proyek ini terdiri dari:
 - **Jumlah Film**: 694 film
 - **Jumlah Pengguna**: 395 pengguna  
 - **Kondisi Data**: Dataset bersih tanpa missing values
-- **Sumber Data**: [MovieLens Dataset](https://grouplens.org/datasets/movielens/) (archive.zip)
+- **Sumber Data**: [MovieLens Dataset](https://www.kaggle.com/datasets/pushpakgote/content-based-filtering-main) (archive.zip)
 
 ### Struktur Data
 
